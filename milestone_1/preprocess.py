@@ -56,17 +56,10 @@ def preprocess(fileName, outFileName):
 				header_cat=header
 			else:
 				dataset_cat_this, header = oneHot(data_feature[:,i], num_datapoints)
-				print(data_feature[:,i])
 				header_cat = header_cat + header
 
-				print(np.shape(dataset_cat))
-				print(np.shape(dataset_cat_this))
-				print(type(dataset_cat_this))
 				dataset_cat = np.concatenate((dataset_cat,dataset_cat_this),axis=1)
 		else:
-			# print("i is ")
-			# print(i)
-			# print(data_feature[1:10, i])
 			fea_num_this = (data_feature[:, i]).astype(np.float)
 
 			dataset_num[:,ct_num_fea] = fea_num_this
@@ -74,14 +67,11 @@ def preprocess(fileName, outFileName):
 			header_num.append(header_ele[i])
 	
 	header_new = header_num + header_cat
-	print(np.shape(dataset_num))
-	print(np.shape(dataset_cat))
 	dataset_new = np.concatenate((dataset_num, dataset_cat), axis=1)
 
 	return dataset_new, header_new, data_label
 
 def fileWrite_features(dataset, header,outFileName):
-	print(header)
 	outFile = open(outFileName, 'w')
 	for word in header:
 		outFile.write(word+';')

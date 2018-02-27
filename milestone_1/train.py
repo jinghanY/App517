@@ -10,6 +10,7 @@ def readData(fileName):
 	header = lines[0]
 	header_ele = header.split(";")
 	header_ele = [x.strip('"') for x in header_ele]
+	header_ele = header_ele[:-1]
 	data_feature = []
 	ct = 0
 	for line in lines:
@@ -24,19 +25,25 @@ def readData(fileName):
 		data_feature.append(features)
 	
 	data_feature = np.array(data_feature)
-	return data_feature
+	return data_feature, header_ele
 
 def loadLabels(inFileName):
 	inFile = open(inFileName, 'r')
 	lines = inFile.readlines()
 	label = []
+	class_names = []
 	for line in lines:
-		label.append(int(float(line)))
+		a = int(float(line))
+		if a == 1:
+			class_names.append("yes")
+		else:
+			class_names.append("no")
+		label.append(a)
 	label = np.array(label)
-	return label
+	return label, class_names
 
 
-def trainCla(features, label):
+def trainCla(features, label, out_graph, header_ele,label_names):
 	model = LogisticRegression(penalty = 'l1')
 	print("starting split dataset \n")
 	X_train, X_test, y_train, y_test = train_test_split(features, label, test_size=0.4)
@@ -58,12 +65,10 @@ def trainCla(features, label):
 	# predict class labels for the test set
 	print("start prediction for testing data \n")
 	predicted = model.predict(X_test)
-	print(predicted)
+
 	# generate class probabilities
 	probs = model.predict_proba(X_test)
-	print(probs)
-	print(np.shape(probs))
-	print(len(probs[:,1]))
+
 	# generate evaluation metrics
 	print("testing accuracy")
 	print(metrics.accuracy_score(y_test,predicted))
@@ -76,6 +81,7 @@ def trainCla(features, label):
 	print("start training for decision tree.\n")
 	clf_tree = tree.DecisionTreeClassifier(max_depth=6)
 	clf_tree = clf_tree.fit(X_train, y_train)
+	tree.export_graphviz(clf_tree, out_file = out_graph,feature_names=header_ele,class_names=label_names)
 	
 	print("training accuracy\n")
 	predicted_tree_train = clf_tree.predict(X_train)
@@ -95,24 +101,10 @@ def diffThres(ypredProb, yReal):
 	f1 = []
 	for i in range(len(thresholds)):
 		threshold_this = thresholds[i]
-		print("len of ypredProb")
-		print(len(ypredProb))
 		yPred_this = getPred(ypredProb, threshold_this)
-		print(yPred_this)
-		print(yReal)
-		print(type(yPred_this))
-		print(len(yPred_this))
-		print(type(yReal))
-		print(len(yReal))
 		f1_this = metrics.f1_score(yReal, yPred_this)
 		f1.append(f1_this)
-	print("thresholds")
-	print(thresholds)
-	print("f1 are")
-	print(f1)
 	hest_f1 = max(f1)
-	print("highest f1 is")
-	print(hest_f1)
 	best_threshold = thresholds[f1.index(hest_f1)]
 
 	maximum_call = sum(getPred(ypredProb, best_threshold))
@@ -138,9 +130,9 @@ if __name__ == "__main__":
 	cwd = os.getcwd()
 	file_name_feature = cwd + "/../dataset/bank-additional-full_new_features.csv"
 	file_name_label = cwd + "/../dataset/bank-additional-full_new_labels.csv"
-	dataset = readData(file_name_feature)
-	label = loadLabels(file_name_label)
-	probs_log, probs_tree, y_test = trainCla(dataset, label)
+	dataset,header_ele = readData(file_name_feature)
+	label, class_names = loadLabels(file_name_label)
+	probs_log, probs_tree, y_test = trainCla(dataset, label,"tree.dot", header_ele,class_names)
 	hest_f1, best_threshold, maximum_call = diffThres(probs_log, y_test)
 	print("***************logistic regression******************\n")
 	print("highest F1 score ")
