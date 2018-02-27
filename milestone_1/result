@@ -1,0 +1,46 @@
+starting split dataset
+
+end for splitting dataset
+
+************logistic regression with lasso**********
+start training...
+
+end training.
+
+start prediction for training data
+
+training accuracy
+0.9115004855940434
+start prediction for testing data
+
+testing accuracy
+0.910536537994659
+0.931269790620152
+************Decision Tree**********
+
+start training for decision tree.
+
+training accuracy
+
+0.9234784719974102
+test accuracy
+
+0.9133891721291576
+/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sklearn/metrics/classification.py:1135: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 due to no predicted samples.
+  'precision', 'predicted', average, warn_for)
+***************logistic regression******************
+
+highest F1 score
+0.6070381231671554
+best threshold
+0.2631578947368421
+maximum number to reach out
+2255.0
+*************** Decision Tree ******************
+
+highest F1 score
+0.6238819320214669
+best threshold
+0.2631578947368421
+maximum number to reach out
+2635.0
