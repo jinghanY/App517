@@ -1,0 +1,65 @@
+Start loading data @ 0.00000
+
+End loading data @ 0.00000
+
+Start shuffling and sampling @ 0.00000
+
+End shuffling and sampling @ 0.91600
+
+Start splitting dataset with 10-folds @ 0.91700
+
+End splitting dataset with 10-folds @ 0.91700
+
+Start training model 0 @ 0.91800
+Accuracy for X_train: 0.94910
+Accuracy for X_test 0.92016
+End training model 0 @ 2.11700
+
+Start training model 1 @ 2.11700
+Accuracy for X_train: 0.94843
+Accuracy for X_test 0.89421
+End training model 1 @ 3.29600
+
+Start training model 2 @ 3.29600
+Accuracy for X_train: 0.94867
+Accuracy for X_test 0.90200
+End training model 2 @ 4.49000
+
+Start training model 3 @ 4.49100
+Accuracy for X_train: 0.95089
+Accuracy for X_test 0.90200
+End training model 3 @ 5.69900
+
+Start training model 4 @ 5.70000
+Accuracy for X_train: 0.95000
+Accuracy for X_test 0.90200
+End training model 4 @ 6.89000
+
+Start training model 5 @ 6.89000
+Accuracy for X_train: 0.94844
+Accuracy for X_test 0.90600
+End training model 5 @ 8.10900
+
+Start training model 6 @ 8.11000
+Accuracy for X_train: 0.95156
+Accuracy for X_test 0.89800
+End training model 6 @ 9.34300
+
+Start training model 7 @ 9.34400
+Accuracy for X_train: 0.94911
+Accuracy for X_test 0.91600
+End training model 7 @ 10.58800
+
+Start training model 8 @ 10.58900
+Accuracy for X_train: 0.94868
+Accuracy for X_test 0.88577
+End training model 8 @ 11.80700
+
+Start training model 9 @ 11.80800
+Accuracy for X_train: 0.95046
+Accuracy for X_test 0.90180
+End training model 9 @ 13.03600
+
+Average accuracy = 0.90279
+
+Total elapsed time: 13.03700
