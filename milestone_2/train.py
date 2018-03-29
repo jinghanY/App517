@@ -70,24 +70,12 @@ print("End loading data @ %.5f\n" % (time.time()-elapsed))
 
 print("Start shuffling and sampling @ %.5f\n" % (time.time()-elapsed))
 features, header_ele = readData(file_name_feature)
-features = shuffle(features, random_state=42)[:4118]
+features = shuffle(features, random_state=42)[:500]
 features[:, :9] = zscore(features[:, :9])
 
 label, label_names = loadLabels(file_name_label)
-label = shuffle(label, random_state=42)[:4118]
+label = shuffle(label, random_state=42)[:500]
 print("End shuffling and sampling @ %.5f\n" % (time.time()-elapsed))
-
-# print("Start searching for best parameters @ %.5f" % (time.time()-elapsed))
-# C_range = np.logspace(-0, 2, 1)
-# gamma_range = np.logspace(-1, 1, 1)
-# param_grid = dict(gamma=gamma_range, C=C_range)
-# cv = StratifiedShuffleSplit(n_splits=5, test_size=0.2, random_state=42)
-# grid = GridSearchCV(svm.SVC(), param_grid=param_grid, cv=cv)
-# grid.fit(features, label)
-# print("The best parameters are %s with a score of %0.2f"
-#       % (grid.best_params_, grid.best_score_))
-# # The best parameters are {'gamma': 0.10000000000000001, 'C': 1.0} with a score of 0.90
-# print("End searching for best parameters @ %.5f" % (time.time()-elapsed))
 
 print("Start splitting dataset with 10-folds @ %.5f\n" % (time.time()-elapsed))
 Kfold = StratifiedKFold(n_splits=n_splits)
@@ -113,7 +101,7 @@ for i, (train_index, test_index) in enumerate(Kfold.split(features, label)):
     # kernel = 1.0 * RBF(length_scale=1.0)
     # gp_opt = GaussianProcessClassifier(kernel=kernel)
     # gp_opt.fit(X_train, y_train)
-    # neg_lpd_opt = -np.log(np.prod(gp_opt.predict_proba(X_test)[np.arange(len(X_test)), y_test]))
+    # neg_lpd_opt = -np.mean(np.log(gp_opt.predict_proba(X_test)[np.arange(len(X_test)), y_test]))
     # print("Optimized kernel of model %d is %s @ %.5f\n" % (i, gp_opt.kernel_, time.time()-elapsed))
     # if neg_lpd_opt < best_nlpd:
     #     best_kernel = gp_opt.kernel_
@@ -128,15 +116,14 @@ for i, (train_index, test_index) in enumerate(Kfold.split(features, label)):
     gp_matern_fix.fit(X_train,y_train)
     print("End training model %d @ %.5f\n" % (i, time.time()-elapsed))
 
-
     # negative log predictive density
-    neg_lpd_rbf_t = -np.log(np.prod(gp_rbf_fix.predict_proba(X_train)[np.arange(len(X_train)), y_train]))
+    neg_lpd_rbf_t = -np.mean(np.log(gp_rbf_fix.predict_proba(X_train)[np.arange(len(X_train)), y_train]))
     print("Negative log predictive density of training set with rbf kernel %.3f" % neg_lpd_rbf_t)
-    neg_lpd_matern_t = -np.log(np.prod(gp_matern_fix.predict_proba(X_train)[np.arange(len(X_train)), y_train]))
+    neg_lpd_matern_t = -np.mean(np.log(gp_matern_fix.predict_proba(X_train)[np.arange(len(X_train)), y_train]))
     print("Negative log predictive density of training set with matern kernel %.3f" % neg_lpd_matern_t)
-    neg_lpd_rbf_v = -np.log(np.prod(gp_rbf_fix.predict_proba(X_test)[np.arange(len(X_test)), y_test]))
+    neg_lpd_rbf_v = -np.mean(np.log(gp_rbf_fix.predict_proba(X_test)[np.arange(len(X_test)), y_test]))
     print("Negative log predictive density of validation set with rbf kernel %.3f" % neg_lpd_rbf_v)
-    neg_lpd_matern_v = -np.log(np.prod(gp_matern_fix.predict_proba(X_test)[np.arange(len(X_test)), y_test]))
+    neg_lpd_matern_v = -np.mean(np.log(gp_matern_fix.predict_proba(X_test)[np.arange(len(X_test)), y_test]))
     print("Negative log predictive density of validation set with matern kernel %.3f" % neg_lpd_matern_v)
     nlpd_rbf_t[i] = neg_lpd_rbf_t
     nlpd_matern_t[i] = neg_lpd_matern_t
@@ -152,20 +139,6 @@ for i, (train_index, test_index) in enumerate(Kfold.split(features, label)):
     print("Accuracy for X_train with matern kernel: %.5f" % accuracy_matern[i])
     print("Accuracy for X_test with matern kernel: %.5f\n"
           % accuracy_score(y_test, gp_matern_fix.predict(X_test)))
-
-    # print("Log Marginal Likelihood (rbf): %.3f"
-    #       % gp_rbf_fix.log_marginal_likelihood(gp_rbf_fix.kernel_.theta))
-    # print("Log Marginal Likelihood (matern): %.3f"
-    #       % gp_matern_fix.log_marginal_likelihood(gp_matern_fix.kernel_.theta))
-    # print("Log Marginal Likelihood (optimized): %.3f"
-    #       % gp_opt.log_marginal_likelihood(gp_opt.kernel_.theta))
-
-    # print("Log-loss: %.3f (default) "
-    #       % (log_loss(y_train, gp_def.predict_proba(X_train)[:, 1])))
-    # print("Log-loss: %.3f (modified) "
-    #       % (log_loss(y_train, gp_rbf_fix.predict_proba(X_train)[:, 1])))
-    # print("Log-loss: %.3f (optimized) "
-    #       % (log_loss(y_train, gp_opt.predict_proba(X_train)[:, 1])))
 
 print("Average accuracy with rbf kernel: %.5f" % np.mean(accuracy_rbf))
 print("Average accuracy with matern kernel: %.5f" % np.mean(accuracy_matern))
