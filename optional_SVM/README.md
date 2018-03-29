@@ -8,4 +8,7 @@ We kept using the dataset with the purpose of selling a financial product to pot
 - Cross validation with StratifiedKFold, which preserves the percentage of samples for each class
 - RBF kernel with C = 1 and gamma = 0.1 (parameters are determined by searching)
 - Linear kernel
-- Accuracy as measurement
+- Accuracy, confusion matrix, and F1-score as measurement
+* F1-score
+
+![F1-score]https://latex.codecogs.com/gif.latex?F_1=\frac{2}{\frac{1}{\text{recall}}+\frac{1}{\text{precision}}}=2\cdot\frac{\text{precision}\cdot\text{recall}}{\text{precision}+\text{recall}}
