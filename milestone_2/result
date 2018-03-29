@@ -1,149 +1,149 @@
 Start loading data @ 0.00000
 
-End loading data @ 0.00200
+End loading data @ 0.00000
 
-Start shuffling and sampling @ 0.00200
+Start shuffling and sampling @ 0.00000
 
-End shuffling and sampling @ 0.85100
+End shuffling and sampling @ 1.19000
 
-Start splitting dataset with 10-folds @ 0.85100
+Start splitting dataset with 10-folds @ 1.19000
 
-End splitting dataset with 10-folds @ 0.85200
+End splitting dataset with 10-folds @ 1.19250
 
-Start training model 0 @ 0.85300
+Start training model 0 @ 1.19250
 
-End training model 0 @ 1.58600
+End training model 0 @ 1.46250
 
-Negative log predictive density of training set with rbf kernel 173.514
-Negative log predictive density of training set with matern kernel 141.383
-Negative log predictive density of validation set with rbf kernel 22.560
-Negative log predictive density of validation set with matern kernel 21.982
-Accuracy for X_train with rbf kernel: 0.93333
-Accuracy for X_test with rbf kernel: 0.90000
-Accuracy for X_train with matern kernel: 0.96000
-Accuracy for X_test with matern kernel: 0.91000
+Negative log predictive density of training set with rbf kernel 0.157
+Negative log predictive density of training set with matern kernel 0.155
+Negative log predictive density of validation set with rbf kernel 0.227
+Negative log predictive density of validation set with matern kernel 0.234
+Accuracy for X_train with rbf kernel: 0.96882
+Accuracy for X_test with rbf kernel: 0.92157
+Accuracy for X_train with matern kernel: 0.97105
+Accuracy for X_test with matern kernel: 0.94118
 
-Start training model 1 @ 8.68000
+Start training model 1 @ 2.47750
 
-End training model 1 @ 9.41300
+End training model 1 @ 2.72250
 
-Negative log predictive density of training set with rbf kernel 173.672
-Negative log predictive density of training set with matern kernel 141.515
-Negative log predictive density of validation set with rbf kernel 22.020
-Negative log predictive density of validation set with matern kernel 21.845
-Accuracy for X_train with rbf kernel: 0.92778
-Accuracy for X_test with rbf kernel: 0.90000
-Accuracy for X_train with matern kernel: 0.95778
-Accuracy for X_test with matern kernel: 0.90000
+Negative log predictive density of training set with rbf kernel 0.156
+Negative log predictive density of training set with matern kernel 0.155
+Negative log predictive density of validation set with rbf kernel 0.250
+Negative log predictive density of validation set with matern kernel 0.255
+Accuracy for X_train with rbf kernel: 0.96437
+Accuracy for X_test with rbf kernel: 0.88235
+Accuracy for X_train with matern kernel: 0.97105
+Accuracy for X_test with matern kernel: 0.88235
 
-Start training model 2 @ 16.29100
+Start training model 2 @ 3.78500
 
-End training model 2 @ 17.03100
+End training model 2 @ 4.01750
 
-Negative log predictive density of training set with rbf kernel 174.295
-Negative log predictive density of training set with matern kernel 140.892
-Negative log predictive density of validation set with rbf kernel 21.186
-Negative log predictive density of validation set with matern kernel 21.413
-Accuracy for X_train with rbf kernel: 0.92889
-Accuracy for X_test with rbf kernel: 0.91000
-Accuracy for X_train with matern kernel: 0.96000
-Accuracy for X_test with matern kernel: 0.92000
+Negative log predictive density of training set with rbf kernel 0.155
+Negative log predictive density of training set with matern kernel 0.154
+Negative log predictive density of validation set with rbf kernel 0.247
+Negative log predictive density of validation set with matern kernel 0.247
+Accuracy for X_train with rbf kernel: 0.96659
+Accuracy for X_test with rbf kernel: 0.88235
+Accuracy for X_train with matern kernel: 0.96882
+Accuracy for X_test with matern kernel: 0.88235
 
-Start training model 3 @ 24.27900
+Start training model 3 @ 5.00750
 
-End training model 3 @ 25.01300
+End training model 3 @ 5.24250
 
-Negative log predictive density of training set with rbf kernel 172.660
-Negative log predictive density of training set with matern kernel 140.500
-Negative log predictive density of validation set with rbf kernel 23.646
-Negative log predictive density of validation set with matern kernel 23.178
-Accuracy for X_train with rbf kernel: 0.93000
-Accuracy for X_test with rbf kernel: 0.93000
-Accuracy for X_train with matern kernel: 0.96333
-Accuracy for X_test with matern kernel: 0.93000
-
-Start training model 4 @ 32.40200
-
-End training model 4 @ 33.14200
-
-Negative log predictive density of training set with rbf kernel 175.854
-Negative log predictive density of training set with matern kernel 142.524
-Negative log predictive density of validation set with rbf kernel 18.787
-Negative log predictive density of validation set with matern kernel 18.782
-Accuracy for X_train with rbf kernel: 0.92556
-Accuracy for X_test with rbf kernel: 0.92000
-Accuracy for X_train with matern kernel: 0.95556
-Accuracy for X_test with matern kernel: 0.92000
-
-Start training model 5 @ 40.25600
-
-End training model 5 @ 41.00100
-
-Negative log predictive density of training set with rbf kernel 169.415
-Negative log predictive density of training set with matern kernel 137.826
-Negative log predictive density of validation set with rbf kernel 26.899
-Negative log predictive density of validation set with matern kernel 26.424
-Accuracy for X_train with rbf kernel: 0.93667
-Accuracy for X_test with rbf kernel: 0.87000
-Accuracy for X_train with matern kernel: 0.96111
-Accuracy for X_test with matern kernel: 0.86000
-
-Start training model 6 @ 48.20900
-
-End training model 6 @ 48.96000
-
-Negative log predictive density of training set with rbf kernel 177.430
-Negative log predictive density of training set with matern kernel 144.114
-Negative log predictive density of validation set with rbf kernel 18.751
-Negative log predictive density of validation set with matern kernel 19.256
-Accuracy for X_train with rbf kernel: 0.93000
-Accuracy for X_test with rbf kernel: 0.94000
-Accuracy for X_train with matern kernel: 0.96222
-Accuracy for X_test with matern kernel: 0.94000
-
-Start training model 7 @ 56.19200
-
-End training model 7 @ 56.91900
-
-Negative log predictive density of training set with rbf kernel 167.043
-Negative log predictive density of training set with matern kernel 135.513
-Negative log predictive density of validation set with rbf kernel 28.584
-Negative log predictive density of validation set with matern kernel 28.653
-Accuracy for X_train with rbf kernel: 0.93444
-Accuracy for X_test with rbf kernel: 0.89000
-Accuracy for X_train with matern kernel: 0.96333
-Accuracy for X_test with matern kernel: 0.88000
-
-Start training model 8 @ 63.83400
-
-End training model 8 @ 64.56800
-
-Negative log predictive density of training set with rbf kernel 172.077
-Negative log predictive density of training set with matern kernel 140.533
-Negative log predictive density of validation set with rbf kernel 23.984
-Negative log predictive density of validation set with matern kernel 23.203
-Accuracy for X_train with rbf kernel: 0.93111
-Accuracy for X_test with rbf kernel: 0.89000
-Accuracy for X_train with matern kernel: 0.96000
-Accuracy for X_test with matern kernel: 0.91000
-
-Start training model 9 @ 71.81900
-
-End training model 9 @ 72.56100
-
-Negative log predictive density of training set with rbf kernel 166.888
-Negative log predictive density of training set with matern kernel 135.356
-Negative log predictive density of validation set with rbf kernel 27.986
-Negative log predictive density of validation set with matern kernel 28.421
-Accuracy for X_train with rbf kernel: 0.93444
+Negative log predictive density of training set with rbf kernel 0.158
+Negative log predictive density of training set with matern kernel 0.158
+Negative log predictive density of validation set with rbf kernel 0.231
+Negative log predictive density of validation set with matern kernel 0.233
+Accuracy for X_train with rbf kernel: 0.96667
 Accuracy for X_test with rbf kernel: 0.88000
-Accuracy for X_train with matern kernel: 0.96000
+Accuracy for X_train with matern kernel: 0.96889
 Accuracy for X_test with matern kernel: 0.88000
 
-Average accuracy with rbf kernel: 0.93122
-Average accuracy with matern kernel: 0.96033
-Average negative log predictive density of training set with rbf kernel: 172.28467
-Average negative log predictive density of training set with matern kernel: 140.01555
-Average negative log predictive density of validation set with rbf kernel: 23.44020
-Average negative log predictive density of validation set with matern kernel: 23.31550
-Total elapsed time: 79.58000
+Start training model 4 @ 6.24750
+
+End training model 4 @ 6.47500
+
+Negative log predictive density of training set with rbf kernel 0.155
+Negative log predictive density of training set with matern kernel 0.154
+Negative log predictive density of validation set with rbf kernel 0.243
+Negative log predictive density of validation set with matern kernel 0.245
+Accuracy for X_train with rbf kernel: 0.96222
+Accuracy for X_test with rbf kernel: 0.92000
+Accuracy for X_train with matern kernel: 0.96889
+Accuracy for X_test with matern kernel: 0.92000
+
+Start training model 5 @ 7.44500
+
+End training model 5 @ 7.71500
+
+Negative log predictive density of training set with rbf kernel 0.154
+Negative log predictive density of training set with matern kernel 0.154
+Negative log predictive density of validation set with rbf kernel 0.256
+Negative log predictive density of validation set with matern kernel 0.259
+Accuracy for X_train with rbf kernel: 0.96667
+Accuracy for X_test with rbf kernel: 0.90000
+Accuracy for X_train with matern kernel: 0.97111
+Accuracy for X_test with matern kernel: 0.88000
+
+Start training model 6 @ 8.69250
+
+End training model 6 @ 8.95750
+
+Negative log predictive density of training set with rbf kernel 0.150
+Negative log predictive density of training set with matern kernel 0.150
+Negative log predictive density of validation set with rbf kernel 0.298
+Negative log predictive density of validation set with matern kernel 0.298
+Accuracy for X_train with rbf kernel: 0.96667
+Accuracy for X_test with rbf kernel: 0.88000
+Accuracy for X_train with matern kernel: 0.97111
+Accuracy for X_test with matern kernel: 0.88000
+
+Start training model 7 @ 9.96000
+
+End training model 7 @ 10.22000
+
+Negative log predictive density of training set with rbf kernel 0.155
+Negative log predictive density of training set with matern kernel 0.155
+Negative log predictive density of validation set with rbf kernel 0.240
+Negative log predictive density of validation set with matern kernel 0.240
+Accuracy for X_train with rbf kernel: 0.96674
+Accuracy for X_test with rbf kernel: 0.93878
+Accuracy for X_train with matern kernel: 0.96896
+Accuracy for X_test with matern kernel: 0.93878
+
+Start training model 8 @ 11.25750
+
+End training model 8 @ 11.52500
+
+Negative log predictive density of training set with rbf kernel 0.158
+Negative log predictive density of training set with matern kernel 0.157
+Negative log predictive density of validation set with rbf kernel 0.206
+Negative log predictive density of validation set with matern kernel 0.211
+Accuracy for X_train with rbf kernel: 0.96231
+Accuracy for X_test with rbf kernel: 0.91837
+Accuracy for X_train with matern kernel: 0.96452
+Accuracy for X_test with matern kernel: 0.91837
+
+Start training model 9 @ 12.57250
+
+End training model 9 @ 12.85750
+
+Negative log predictive density of training set with rbf kernel 0.162
+Negative log predictive density of training set with matern kernel 0.161
+Negative log predictive density of validation set with rbf kernel 0.157
+Negative log predictive density of validation set with matern kernel 0.161
+Accuracy for X_train with rbf kernel: 0.96452
+Accuracy for X_test with rbf kernel: 0.91837
+Accuracy for X_train with matern kernel: 0.96674
+Accuracy for X_test with matern kernel: 0.91837
+
+Average accuracy with rbf kernel: 0.96556
+Average accuracy with matern kernel: 0.96911
+Average negative log predictive density of training set with rbf kernel: 0.15600
+Average negative log predictive density of training set with matern kernel: 0.15524
+Average negative log predictive density of validation set with rbf kernel: 0.23556
+Average negative log predictive density of validation set with matern kernel: 0.23840
+Total elapsed time: 13.95250
