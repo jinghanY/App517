@@ -12,6 +12,8 @@ from sklearn.model_selection import StratifiedKFold
 
 from scipy.stats import zscore
 from sklearn import svm
+from sklearn import metrics
+
 
 
 def readData(fileName):
@@ -91,9 +93,11 @@ print("Start splitting dataset with 10-folds @ %.5f\n" % (time.time()-elapsed))
 Kfold = StratifiedKFold(n_splits=n_splits)
 print("End splitting dataset with 10-folds @ %.5f\n" % (time.time()-elapsed))
 
-accuracy = np.zeros(n_splits)
+accuracy_test = np.zeros(n_splits)
+accuracy_train = np.zeros(n_splits)
+f1 = np.zeros(n_splits)
 for i, (train_index, test_index) in enumerate(Kfold.split(features, label)):
-    print("Start training model %d @ %.5f" % (i, time.time()-elapsed))
+    print("Start training model %d @ %.5f\n" % (i, time.time()-elapsed))
     X_train, X_test = features[train_index], features[test_index]
     y_train, y_test = label[train_index], label[test_index]
 
@@ -103,11 +107,17 @@ for i, (train_index, test_index) in enumerate(Kfold.split(features, label)):
     # SVC with linear kernel
     # svm_model = svm.LinearSVC()
     svm_model.fit(X_train, y_train)
-    accuracy[i] = accuracy_score(y_test, svm_model.predict(X_test))
-    print("Accuracy for X_train: %.5f " % accuracy_score(y_train, svm_model.predict(X_train)))
-    print("Accuracy for X_test %.5f " % accuracy[i])
     print("End training model %d @ %.5f\n" % (i, time.time()-elapsed))
 
-print("Average accuracy = %.5f\n" % np.mean(accuracy))
+    accuracy_test[i] = accuracy_score(y_test, svm_model.predict(X_test))
+    accuracy_train[i] = accuracy_score(y_train, svm_model.predict(X_train))
+    f1[i] = metrics.f1_score(y_train, svm_model.predict(X_train))
+    tn, fp, fn, tp = metrics.confusion_matrix(y_train, svm_model.predict(X_train)).ravel()
+    print("TNR, FNR = %.5f, %.5f" % (tn/(tn+fp), fn/(tp+fn)))
+    print("F1-score: %.5f" % f1[i])
+    print("Accuracy for X_train: %.5f" % accuracy_train[i])
+    print("Accuracy for X_test: %.5f\n" % accuracy_test[i])
+
+print("Average accuracy for X_test %.5f\n" % np.mean(accuracy_test))
 
 print("Total elapsed time: %.5f" % (time.time()-elapsed))
