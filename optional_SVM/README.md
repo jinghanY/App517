@@ -41,7 +41,7 @@ And the average accuracy for all validation set is,
 Average accuracy for X_test 0.90279
 ```
 We can see that the TNR is almost 1, but the FNR is also a huge number; the F1-score¡¯s fair; the accuracy for X_train is high, but the accuracy for X_test is only 2% higher than considering all samples as ¡®0¡¯.
-Then I tried with a dataset that contains half labeled as ¡®0¡¯ and half labeled as ¡®1¡¯, and here are the results.
+Then I tried with a dataset that contains half labeled as '0' and half labeled as '1', and here are the results.
 ```
 TNR, FNR = 0.87022, 0.05244
 F1-score: 0.91228
