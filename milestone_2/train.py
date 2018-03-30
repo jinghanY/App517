@@ -10,11 +10,9 @@ from sklearn.gaussian_process import GaussianProcessClassifier
 from sklearn.gaussian_process.kernels import (RBF, DotProduct, Matern)
 from sklearn.gaussian_process.kernels import DotProduct, ConstantKernel as C
 
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import StratifiedShuffleSplit
-from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import StratifiedKFold
 
+from sklearn.preprocessing import normalize
 from scipy.stats import zscore
 
 
@@ -70,11 +68,12 @@ print("End loading data @ %.5f\n" % (time.time()-elapsed))
 
 print("Start shuffling and sampling @ %.5f\n" % (time.time()-elapsed))
 features, header_ele = readData(file_name_feature)
-features = shuffle(features, random_state=42)[:500]
+features = shuffle(features, random_state=41)[:500]
+
 features[:, :9] = zscore(features[:, :9])
 
 label, label_names = loadLabels(file_name_label)
-label = shuffle(label, random_state=42)[:500]
+label = shuffle(label, random_state=41)[:500]
 print("End shuffling and sampling @ %.5f\n" % (time.time()-elapsed))
 
 print("Start splitting dataset with 10-folds @ %.5f\n" % (time.time()-elapsed))
@@ -108,9 +107,9 @@ for i, (train_index, test_index) in enumerate(Kfold.split(features, label)):
     #     best_nlpd = neg_lpd_opt
 
     # Specify Gaussian Processes with fixed and optimized hyperparameters
-    gp_rbf_fix = GaussianProcessClassifier(kernel=3.49 ** 2 * RBF(length_scale=5.28),
+    gp_rbf_fix = GaussianProcessClassifier(kernel=76.5**2 * RBF(length_scale=179),
                                            optimizer=None)
-    gp_matern_fix = GaussianProcessClassifier(kernel=3.84 ** 2 * Matern(length_scale=8.06, nu=1.5),
+    gp_matern_fix = GaussianProcessClassifier(kernel=3.7**2 * Matern(length_scale=9.4, nu=1.5),
                                               optimizer=None)
     gp_rbf_fix.fit(X_train, y_train)
     gp_matern_fix.fit(X_train,y_train)
