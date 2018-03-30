@@ -68,11 +68,18 @@ print("End loading data @ %.5f\n" % (time.time()-elapsed))
 
 print("Start shuffling and sampling @ %.5f\n" % (time.time()-elapsed))
 features, header_ele = readData(file_name_feature)
-features = shuffle(features, random_state=42)[:5000]
+features = shuffle(features, random_state=42)
 features[:, :9] = zscore(features[:, :9])
 
 label, label_names = loadLabels(file_name_label)
-label = shuffle(label, random_state=42)[:5000]
+label = shuffle(label, random_state=42)
+index_0 = np.array(np.where(label == 0))[0]
+index_1 = np.array(np.where(label == 1))[0]
+index = np.array(list(shuffle(index_0, random_state=42)[:2500])+list(shuffle(index_1)[:2500]))
+print(index.shape)
+features = features[index]
+label = label[index]
+
 print("End shuffling and sampling @ %.5f\n" % (time.time()-elapsed))
 
 # Use GridSearchCV to find the best parameters for C and gamma of rbf kernel.
