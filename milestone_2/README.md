@@ -21,6 +21,7 @@ Best kernel is  76.5**2 * RBF(length_scale=179)
 Best kernel is  3.7**2 * Matern(length_scale=9.4, nu=1.5)
 ```
 About Matern kernels, here are some brief information about it.
+
 ![Matern expression](http://scikit-learn.org/stable/_images/math/3073f503e2051eae1f6768f094d9e8d3ebe3ae3d.png)
 
 *The class of Matern kernels is a generalization of the RBF and the absolute exponential kernel parameterized by an additional parameter nu. The smaller nu, the less smooth the approximated function is. For nu=inf, the kernel becomes equivalent to the RBF kernel and for nu=0.5 to the absolute exponential kernel. Important intermediate values are nu=1.5 (once differentiable functions) and nu=2.5 (twice differentiable functions).*
@@ -30,7 +31,9 @@ We used sklearn.model_selection.StratifiedKFold to process the training/validati
 
 ## Error measurement
 We used accuracy and negative log predictive density as error measurement. The accuracy is simply the fraction of true predictions among training/validation set, which gives us a roughly evaluation of the model. The negative log predictive density, can evaluate the model more precise since it takes the predictive probability into account. The expression for the NLPD is as follows.
+
 ![NLPD expression](https://latex.codecogs.com/gif.latex?L=-\frac{1}{n}\sum^{n}_{i=1}\log{p(y_i=t_i|\mathbf{x_i})})
+
 Note that the log function is monotonically increasing, and the greater the probability is, the better the model is. Therefore, the smaller (closer to 0) the NLPD is, the better the model is.
 
 ## Result
