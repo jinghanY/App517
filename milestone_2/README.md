@@ -37,4 +37,14 @@ We used accuracy and negative log predictive density as error measurement. The a
 Note that the log function is monotonically increasing, and the greater the probability is, the better the model is. Therefore, the smaller (closer to 0) the NLPD is, the better the model is.
 
 ## Result
+Here are the last few lines of the result.
+```
+Average accuracy with rbf kernel: 0.94200
+Average accuracy with matern kernel: 0.95755
+Average negative log predictive density of training set with rbf kernel: 0.15083
+Average negative log predictive density of training set with matern kernel: 0.14716
+Average negative log predictive density of validation set with rbf kernel: 0.19793
+Average negative log predictive density of validation set with matern kernel: 0.22344
+Total elapsed time: 9.88400
+```
 From the result, we can see that with matern kernel, the average accuracy is higher and the NLPD of the training set is lower. However, the NLPD is of the validation set of matern kernel is higher of that with RBF kernel, which may indicate some overfitting in the model with matern kernel.
