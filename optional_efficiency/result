@@ -1,0 +1,618 @@
+************ logistic regression with lasso ***********
+
+Training linear model 0 took 0.22345
+
+training accuracy
+0.9130917981773727
+
+
+Testing linear model 0 took 0.00015
+
+testing accuracy
+0.906187624750499
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 0 took 22.07766
+
+training accuracy
+0.9175372304956657
+
+
+Testing GP model_selection 0 took 22.07766
+
+testing accuracy
+0.9001996007984032
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 0 took 0.65294
+
+training accuracy
+0.9493220715714603
+
+
+Testing SVM model_selection 0 took 0.06394
+
+testing accuracy
+0.9001996007984032
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 1 took 0.19443
+
+training accuracy
+0.9115358968659703
+
+
+Testing linear model 1 took 0.00014
+
+testing accuracy
+0.908183632734531
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 1 took 20.28644
+
+training accuracy
+0.9159813291842631
+
+
+Testing GP model_selection 1 took 20.28644
+
+testing accuracy
+0.9161676646706587
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 1 took 0.53600
+
+training accuracy
+0.9473216270282285
+
+
+Testing SVM model_selection 1 took 0.05720
+
+testing accuracy
+0.9121756487025948
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 2 took 0.18310
+
+training accuracy
+0.9124249833296288
+
+
+Testing linear model 2 took 0.00010
+
+testing accuracy
+0.8962075848303394
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 2 took 27.37287
+
+training accuracy
+0.9166481440320071
+
+
+Testing GP model_selection 2 took 27.37287
+
+testing accuracy
+0.9001996007984032
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 2 took 0.65027
+
+training accuracy
+0.9497666148032896
+
+
+Testing SVM model_selection 2 took 0.06895
+
+testing accuracy
+0.908183632734531
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 3 took 0.14987
+
+training accuracy
+0.9137586130251167
+
+
+Testing linear model 3 took 0.00011
+
+testing accuracy
+0.9041916167664671
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 3 took 21.94225
+
+training accuracy
+0.9170926872638364
+
+
+Testing GP model_selection 3 took 21.94225
+
+testing accuracy
+0.9021956087824351
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 3 took 0.55076
+
+training accuracy
+0.9462102689486552
+
+
+Testing SVM model_selection 3 took 0.06421
+
+testing accuracy
+0.9041916167664671
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 4 took 0.20190
+
+training accuracy
+0.9137777777777778
+
+
+Testing linear model 4 took 0.00011
+
+testing accuracy
+0.902
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 4 took 22.09810
+
+training accuracy
+0.9166666666666666
+
+
+Testing GP model_selection 4 took 22.09810
+
+testing accuracy
+0.904
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 4 took 0.56246
+
+training accuracy
+0.9466666666666667
+
+
+Testing SVM model_selection 4 took 0.05497
+
+testing accuracy
+0.898
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 5 took 0.18015
+
+training accuracy
+0.9104444444444444
+
+
+Testing linear model 5 took 0.00008
+
+testing accuracy
+0.914
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 5 took 22.37635
+
+training accuracy
+0.914
+
+
+Testing GP model_selection 5 took 22.37635
+
+testing accuracy
+0.912
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 5 took 0.57757
+
+training accuracy
+0.9468888888888889
+
+
+Testing SVM model_selection 5 took 0.05992
+
+testing accuracy
+0.92
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 6 took 0.19871
+
+training accuracy
+0.9089091313041546
+
+
+Testing linear model 6 took 0.00009
+
+testing accuracy
+0.9298597194388778
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 6 took 26.05590
+
+training accuracy
+0.9140191068651411
+
+
+Testing GP model_selection 6 took 26.05590
+
+testing accuracy
+0.9258517034068137
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 6 took 0.59109
+
+training accuracy
+0.9464563430348811
+
+
+Testing SVM model_selection 6 took 0.06790
+
+testing accuracy
+0.9078156312625251
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 7 took 0.18983
+
+training accuracy
+0.9111308598089314
+
+
+Testing linear model 7 took 0.00013
+
+testing accuracy
+0.905811623246493
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 7 took 31.04360
+
+training accuracy
+0.9162408353699178
+
+
+Testing GP model_selection 7 took 31.04360
+
+testing accuracy
+0.9018036072144289
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 7 took 0.72225
+
+training accuracy
+0.9493445900910908
+
+
+Testing SVM model_selection 7 took 0.06651
+
+testing accuracy
+0.8957915831663327
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 8 took 0.20357
+
+training accuracy
+0.9111308598089314
+
+
+Testing linear model 8 took 0.00021
+
+testing accuracy
+0.9178356713426854
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 8 took 29.91956
+
+training accuracy
+0.9137969340146634
+
+
+Testing GP model_selection 8 took 29.91956
+
+testing accuracy
+0.9158316633266533
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 8 took 0.72300
+
+training accuracy
+0.9451233059320151
+
+
+Testing SVM model_selection 8 took 0.07272
+
+testing accuracy
+0.9158316633266533
+
+
+************ logistic regression with lasso ***********
+
+Training linear model 9 took 0.26036
+
+training accuracy
+0.9102421684070207
+
+
+Testing linear model 9 took 0.00016
+
+testing accuracy
+0.9158316633266533
+
+
+************ Gaussian Process Classification **************
+
+Training GP model_selection 9 took 25.34548
+
+training accuracy
+0.9135747611641858
+
+
+Testing GP model_selection 9 took 25.34548
+
+testing accuracy
+0.9238476953907816
+
+
+******************* SVM classification *********************
+
+Training SVM model_selection 9 took 0.72553
+
+training accuracy
+0.9462341701844035
+
+
+Testing SVM model_selection 9 took 0.06724
+
+testing accuracy
+0.9218436873747495
+
+
+************* final results for the efficiency of linear classification using raw data ****************
+
+Average training time of linear calssification: 0.19854
+Average testing time of linear calssification: 0.00013
+
+************* final results for the efficiency of GP classification using raw data ****************
+
+Average training time of GP calssification: 24.85182
+Average testing time of GP calssification: 0.19172
+
+************* final results for the efficiency of SVM classification using raw data ****************
+
+Average training time of SVM calssification: 0.62919
+Average testing time of SVM calssification: 0.06436
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 0 took 27.11677
+
+training accuracy
+0.9019782173816404
+
+
+Testing GP model_selection 0 took 27.11677
+
+testing accuracy
+0.906187624750499
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 1 took 28.58803
+
+training accuracy
+0.9013114025338964
+
+
+Testing GP model_selection 1 took 28.58803
+
+testing accuracy
+0.906187624750499
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 2 took 27.73348
+
+training accuracy
+0.902200488997555
+
+
+Testing GP model_selection 2 took 27.73348
+
+testing accuracy
+0.9021956087824351
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 3 took 21.78345
+
+training accuracy
+0.9015336741498111
+
+
+Testing GP model_selection 3 took 21.78345
+
+testing accuracy
+0.9041916167664671
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 4 took 21.62925
+
+training accuracy
+0.9037777777777778
+
+
+Testing GP model_selection 4 took 21.62925
+
+testing accuracy
+0.886
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 5 took 22.31340
+
+training accuracy
+0.9011111111111111
+
+
+Testing GP model_selection 5 took 22.31340
+
+testing accuracy
+0.904
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 6 took 21.62054
+
+training accuracy
+0.9013552543879138
+
+
+Testing GP model_selection 6 took 21.62054
+
+testing accuracy
+0.9038076152304609
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 7 took 23.39284
+
+training accuracy
+0.9024661186403021
+
+
+Testing GP model_selection 7 took 23.39284
+
+testing accuracy
+0.8957915831663327
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 8 took 23.14309
+
+training accuracy
+0.9011330815374361
+
+
+Testing GP model_selection 8 took 23.14309
+
+testing accuracy
+0.9078156312625251
+
+
+************ Gaussian Process Classification using SVD **************
+
+Training GP model_selection 9 took 23.22207
+
+training accuracy
+0.9024661186403021
+
+
+Testing GP model_selection 9 took 23.22207
+
+testing accuracy
+0.8957915831663327
+
+
+************* final results for the efficiency of GP classification using SVD data ****************
+
+Average training time of SVD GP calssification: 24.05429
+Average testing time of SVD GP calssification: 0.06389
+
+
+
+
+*************** Comparing between  linear and  GP  *****************
+
+linear  is better than  GP  w.r.t efficiency of training
+
+linear  is better than  GP  w.r.t efficiency of testing
+
+*************** Comparing between  linear and  SVM  *****************
+
+linear  is better than  SVM  w.r.t efficiency of training
+
+linear  is better than  SVM  w.r.t efficiency of testing
+
+*************** Comparing between  linear and  SVD_GP  *****************
+
+linear  is better than  SVD_GP  w.r.t efficiency of training
+
+linear  is better than  SVD_GP  w.r.t efficiency of testing
+
+*************** Comparing between  GP and  SVM  *****************
+
+SVM  is better than  GP  w.r.t efficiency of training
+
+SVM  is better than  GP  w.r.t efficiency of testing
+
+*************** Comparing between  GP and  SVD_GP  *****************
+
+GP  and  SVD_GP  is similar w.r.t efficiency of training
+
+SVD_GP  is better than  GP  w.r.t efficiency of testing
+
+*************** Comparing between  SVM and  SVD_GP  *****************
+
+SVM  is better than  SVD_GP  w.r.t efficiency of training
+
+SVM  and  SVD_GP  is similar w.r.t efficiency of testing
