@@ -35,6 +35,26 @@ We used accuracy and negative log predictive density as error measurement. The a
 
 Note that the log function is monotonically increasing, and the greater the probability is, the better the model is. Therefore, the smaller (closer to 0) the NLPD is, the better the model is.
 
+## Result
+Here are the final results about the models using dataset with and without SVD.
+```
+**************** final results with RBF kernel ********************
+
+Average training accuracy: 0.89662
+Average testing accuracy: 0.88825
+Average negative log predictive density of training set with rbf kernel: 0.51965
+Average negative log predictive density of validation set with rbf kernel of raw data: 0.4853
+Running time for 10-fold cross validation: 34.29782
+
+******************** final results with KNN kernel ************************
+
+Average training accuracy: 0.89499
+Average testing accuracy: 0.88172
+Average negative log predictive density of training set with rbf kernel: 0.18492
+Average negative log predictive density of validation set with rbf kernel of raw data: 0.23590
+Running time for 10-fold cross validation: 18.23773
+```
+
 
 
 
