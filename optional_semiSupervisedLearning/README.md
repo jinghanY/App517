@@ -36,7 +36,7 @@ We used accuracy and negative log predictive density as error measurement. The a
 Note that the log function is monotonically increasing, and the greater the probability is, the better the model is. Therefore, the smaller (closer to 0) the NLPD is, the better the model is.
 
 ## Result
-Here are the final results about the models using dataset with and without SVD.
+Here are the final results of semi-supervised learning based on different kernel function.
 ```
 **************** final results with RBF kernel ********************
 
@@ -54,6 +54,7 @@ Average negative log predictive density of training set with rbf kernel: 0.18492
 Average negative log predictive density of validation set with rbf kernel of raw data: 0.23590
 Running time for 10-fold cross validation: 18.23773
 ```
+We can see the two models above have comparable average performance, no mater the training accuracy or the testing one. But when we compare the negative log predictive density of these two model, we can find out the one based on the KNN kernel is better than its counterpart. Meanwhile, the running time of these two model agree on the previous statement, which is the KNN based model is faster and performs better then the model base on RBF. 
 
 
 
