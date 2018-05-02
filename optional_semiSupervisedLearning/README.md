@@ -16,3 +16,6 @@ We kept using the dataset with the purpose of selling a financial product to pot
 ## Dataset Split
 Since the Semi-Supervised Learning use unlabeled data points to gain information about the model or boundary, we need to determine the best fraction to split the dataset. We divided the dataset of 5000 data points into 10 parts, with 500 data points each, then we tried different fraction of number of labeled data points to number of unlabeled ones, such as 1:9, 2:8, 3:7 and so on. After a lot of experiments, we found out the best split strategy is the fraction of labeled to unlabeled is 1 : 9.
 
+## Parameter Alpha Optimization
+The clamping factor Alpha whose value is in [0, 1], specifies the relative amount that an instance should adopt the information from its neighbors as opposed to its initial label. alpha=0 means keeping the initial label information; alpha=1 means replacing all initial information. We conducted experiments to iteriate through 0.01, 0.1, 0.2, 0.3, 0.4, 0.5,...,0.99 to determine which alpha is the most suitable value for this dataset. We concluded that the testing accuracy is the highest when the alpha is 0.1.
+
