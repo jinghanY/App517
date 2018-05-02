@@ -28,6 +28,13 @@ The LabelSpreading model has two kernels to choose from, RBF kernel and KNN kern
 ## Cross Validation
 Since the speciality of the unlabeled data points, we coded our own 10-fold cross validation. Which is split the dataset into 10 parts equally, after we decide how to split the dataset, then each time selected the best number of data points to be the labeled data and set other labels to -1, after the fit and predict, switch to the next same amount of data points and do the same process. After went through all data points, averaged the accuracy each iteration got to get the average training and testing accuracy.
 
+## Error measurement
+We used accuracy and negative log predictive density as error measurement. The accuracy is simply the fraction of true predictions among training/validation set, which gives us a roughly evaluation of the model. The negative log predictive density, can evaluate the model more precise since it takes the predictive probability into account. The expression for the NLPD is as follows.
+
+![NLPD expression](https://latex.codecogs.com/gif.latex?L=-\frac{1}{n}\sum^{n}_{i=1}\log{p(y_i=t_i|\mathbf{x_i})})
+
+Note that the log function is monotonically increasing, and the greater the probability is, the better the model is. Therefore, the smaller (closer to 0) the NLPD is, the better the model is.
+
 
 
 
