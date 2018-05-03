@@ -31,7 +31,7 @@ Here are the final results of semi-supervised learning based on different kernel
 ```
 **************** final results with RBF kernel ********************
 
-|  Model Name   | Training Acc | Testing Acc | Training NLPD | Testing NLPD | Running TimeD |  
+|  Model Name   | Training Acc | Testing Acc | Training NLPD | Testing NLPD | Running Time  |  
 |---------------|--------------|-------------|---------------|--------------|---------------|
 |     SVM       |   0.94733    |   0.90840   |    0.12958    |   0.23351    |   68.71207    |
 | Decision Tree |   0.93616    |   0.95208   |    0.14917    |   0.11697    |   1.87422     |
@@ -55,4 +55,5 @@ RBF_SSL = Semi-Supervised Learning with RBF kernel
 KNN_SSL = Semi-Supervised Learning with KNN kernel
 
 ```
+
 
