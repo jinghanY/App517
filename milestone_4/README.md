@@ -29,7 +29,7 @@ Note that the log function is monotonically increasing, and the greater the prob
 ## Result
 Here are the final results of semi-supervised learning based on different kernel function.
 ```
-**************** final results with RBF kernel ********************
+**************** Results of comparsion between different models ********************
 
 |  Model Name   | Training Acc | Testing Acc | Training NLPD | Testing NLPD | Running Time  |  
 |---------------|--------------|-------------|---------------|--------------|---------------|
@@ -40,7 +40,7 @@ Here are the final results of semi-supervised learning based on different kernel
 |  MATERN_GP    |   0.93907    |   0.90960   |    0.15003    |   0.19460    |   907.11759   |
 |   SVD_GP      |   0.90169    |   0.90120   |    0.27720    |   0.27867    |   429.92041   |
 |   RBF_SSL     |   0.89660    |   0.89660   |    0.51965    |   0.48530    |   34.29781    |
-|   KNN_SSL     |   0.89499    |   0.88172   |    0.18492    |   0.23590    |   18.23773    |
+|   KNN_SSL     |   0.89499    |   0.89499   |    0.18492    |   0.23590    |   18.23773    |
 
 Training Acc = Average Training Accuracy
 Testing Acc = Average Testing Accuracy
@@ -55,5 +55,11 @@ RBF_SSL = Semi-Supervised Learning with RBF kernel
 KNN_SSL = Semi-Supervised Learning with KNN kernel
 
 ```
+The table above shows some results of the methods that we have implemented for this semester, which includes SVM, Logistic Regression, Gaussian Process and Semi_Supervised Learning. As we know, the most significant factor of determining whether a model is good or not is the accuracy. We used 10-fold cross validation to get the average accuracy of 10 training. From this perspective, we can see the SVM model has the highest training accuracy and the Semi-Supervised Learning with KNN kernel has the lowest traning accuracy. For the comparsion of the testing accuracy of these models, the Decision Tree model has the highest testing accuracy, but the testing accuracy is higher than the training accuracy, which indicate that the desicion tree has some limitation to learn from the data because of the data structure. Then the Gaussian Process with RBF kernel has the second highest testing accuracy. 
+
+Usually we will use the testing accuracy to be the most reliable standard to determine if the model is good or bad. As we discussed above, the Gaussian Process has the best achievable average testing accuracy, but the running time for 5000 data points is around 450 seconds, which is much longer than the model with the third highest average accuracy: Logistic Regession. When we look into the Average Negative Log Predictive Density of training set and testing set, the values of Logistic Regession are also acceptable. Then we can conclude that for the dataset with the purpose of selling a financial product to potential customers, the logistic regression is the most suitable model for classification.
+
+For the model with the worst performance, we tried to look deeper into the data structure of the given dataset, found out that the labels of datasets is unbalanced, The number of 0 is 36548, which is about 88.73% of all the labels. Because of this data structure, the model predict mistakenly by taking advantage of the information retrieved from the unlabeled data. 
+
 
 
