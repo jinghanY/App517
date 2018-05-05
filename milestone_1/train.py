@@ -83,7 +83,7 @@ def trainCla(features, label, out_graph, header_ele,label_names):
 	# plot 
 	plt.figure()
 	lw = 2
-	plt.plot(fpr_log,tpr_log, color = 'darkorange', lw=lw, label='ROC curve for class 0 (logistic regression)' )
+	plt.plot(fpr_log,tpr_log, color = 'darkorange', lw=lw, label='ROC curve for class 1 (logistic regression)' )
 	plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
 	plt.xlim([0.0, 1.0])
 	plt.ylim([0.0, 1.05])
@@ -133,7 +133,7 @@ def trainCla(features, label, out_graph, header_ele,label_names):
 	# plot 
 	plt.figure()
 	lw = 2
-	plt.plot(fpr_tree,tpr_tree, color = 'darkorange', lw=lw, label='ROC curve for class 0 (tree)')
+	plt.plot(fpr_tree,tpr_tree, color = 'darkorange', lw=lw, label='ROC curve for class 1 (tree)')
 	plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
 	plt.xlim([0.0, 1.0])
 	plt.ylim([0.0, 1.05])
