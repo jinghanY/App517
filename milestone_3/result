@@ -1,0 +1,300 @@
+Using the raw dataset 
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 0 @ 0.84117
+
+Negative log predictive density of training set with rbf kernel of raw data 0.197
+Negative log predictive density of validation set with rbf kernel of raw data 0.219
+
+
+End training model 0 @ 28.10388
+
+Accuracy for X_train with rbf kernel of raw data: 0.91754
+Accuracy for X_test with rbf kernel of raw data: 0.90020
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 1 @ 29.90380
+
+Negative log predictive density of training set with rbf kernel of raw data 0.199
+Negative log predictive density of validation set with rbf kernel of raw data 0.195
+
+
+End training model 1 @ 54.72821
+
+Accuracy for X_train with rbf kernel of raw data: 0.91598
+Accuracy for X_test with rbf kernel of raw data: 0.91617
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 2 @ 56.42927
+
+Negative log predictive density of training set with rbf kernel of raw data 0.192
+Negative log predictive density of validation set with rbf kernel of raw data 0.260
+
+
+End training model 2 @ 85.17351
+
+Accuracy for X_train with rbf kernel of raw data: 0.91665
+Accuracy for X_test with rbf kernel of raw data: 0.90020
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 3 @ 86.88826
+
+Negative log predictive density of training set with rbf kernel of raw data 0.197
+Negative log predictive density of validation set with rbf kernel of raw data 0.211
+
+
+End training model 3 @ 111.52192
+
+Accuracy for X_train with rbf kernel of raw data: 0.91709
+Accuracy for X_test with rbf kernel of raw data: 0.90220
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 4 @ 113.21837
+
+Negative log predictive density of training set with rbf kernel of raw data 0.198
+Negative log predictive density of validation set with rbf kernel of raw data 0.213
+
+
+End training model 4 @ 139.47966
+
+Accuracy for X_train with rbf kernel of raw data: 0.91667
+Accuracy for X_test with rbf kernel of raw data: 0.90400
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 5 @ 141.19320
+
+Negative log predictive density of training set with rbf kernel of raw data 0.199
+Negative log predictive density of validation set with rbf kernel of raw data 0.194
+
+
+End training model 5 @ 165.41585
+
+Accuracy for X_train with rbf kernel of raw data: 0.91400
+Accuracy for X_test with rbf kernel of raw data: 0.91200
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 6 @ 167.18041
+
+Negative log predictive density of training set with rbf kernel of raw data 0.198
+Negative log predictive density of validation set with rbf kernel of raw data 0.201
+
+
+End training model 6 @ 194.05253
+
+Accuracy for X_train with rbf kernel of raw data: 0.91402
+Accuracy for X_test with rbf kernel of raw data: 0.92585
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 7 @ 195.78417
+
+Negative log predictive density of training set with rbf kernel of raw data 0.198
+Negative log predictive density of validation set with rbf kernel of raw data 0.216
+
+
+End training model 7 @ 223.57145
+
+Accuracy for X_train with rbf kernel of raw data: 0.91624
+Accuracy for X_test with rbf kernel of raw data: 0.90180
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 8 @ 225.32200
+
+Negative log predictive density of training set with rbf kernel of raw data 0.200
+Negative log predictive density of validation set with rbf kernel of raw data 0.186
+
+
+End training model 8 @ 252.98024
+
+Accuracy for X_train with rbf kernel of raw data: 0.91380
+Accuracy for X_test with rbf kernel of raw data: 0.91583
+
+
+******************* Gaussian Process classification using raw data *****************
+
+Start training model 9 @ 254.72136
+
+Negative log predictive density of training set with rbf kernel of raw data 0.197
+Negative log predictive density of validation set with rbf kernel of raw data 0.216
+
+
+End training model 9 @ 279.46790
+
+Accuracy for X_train with rbf kernel of raw data: 0.91357
+Accuracy for X_test with rbf kernel of raw data: 0.92385
+
+
+**************** final results using raw data ********************
+
+Average train accuracy of raw data: 0.91556
+Average test accuracy of raw data: 0.91021
+Average negative log predictive density of training set with rbf kernel of raw data: 0.19745
+Average negative log predictive density of validation set with rbf kernel of raw data: 0.21109
+
+
+
+Using the dataset after SVD 
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 0 @ 281.22206
+
+Negative log predictive density of training set with rbf kernel of svd data 0.277
+Negative log predictive density of validation set with rbf kernel of svd data 0.282
+
+
+End training model 0 @ 305.13798
+
+Accuracy for X_train with rbf kernel of svd data: 0.90198
+Accuracy for X_test with rbf kernel of svd data: 0.90619
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 1 @ 305.84005
+
+Negative log predictive density of training set with rbf kernel of svd data 0.279
+Negative log predictive density of validation set with rbf kernel of svd data 0.264
+
+
+End training model 1 @ 331.67472
+
+Accuracy for X_train with rbf kernel of svd data: 0.90131
+Accuracy for X_test with rbf kernel of svd data: 0.90619
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 2 @ 332.37695
+
+Negative log predictive density of training set with rbf kernel of svd data 0.278
+Negative log predictive density of validation set with rbf kernel of svd data 0.275
+
+
+End training model 2 @ 357.11795
+
+Accuracy for X_train with rbf kernel of svd data: 0.90220
+Accuracy for X_test with rbf kernel of svd data: 0.90220
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 3 @ 357.82933
+
+Negative log predictive density of training set with rbf kernel of svd data 0.277
+Negative log predictive density of validation set with rbf kernel of svd data 0.276
+
+
+End training model 3 @ 380.32519
+
+Accuracy for X_train with rbf kernel of svd data: 0.90153
+Accuracy for X_test with rbf kernel of svd data: 0.90419
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 4 @ 381.12048
+
+Negative log predictive density of training set with rbf kernel of svd data 0.273
+Negative log predictive density of validation set with rbf kernel of svd data 0.312
+
+
+End training model 4 @ 402.88244
+
+Accuracy for X_train with rbf kernel of svd data: 0.90378
+Accuracy for X_test with rbf kernel of svd data: 0.88600
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 5 @ 403.58264
+
+Negative log predictive density of training set with rbf kernel of svd data 0.280
+Negative log predictive density of validation set with rbf kernel of svd data 0.259
+
+
+End training model 5 @ 424.95402
+
+Accuracy for X_train with rbf kernel of svd data: 0.90111
+Accuracy for X_test with rbf kernel of svd data: 0.90400
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 6 @ 425.65441
+
+Negative log predictive density of training set with rbf kernel of svd data 0.279
+Negative log predictive density of validation set with rbf kernel of svd data 0.263
+
+
+End training model 6 @ 446.57641
+
+Accuracy for X_train with rbf kernel of svd data: 0.90136
+Accuracy for X_test with rbf kernel of svd data: 0.90381
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 7 @ 447.27215
+
+Negative log predictive density of training set with rbf kernel of svd data 0.277
+Negative log predictive density of validation set with rbf kernel of svd data 0.283
+
+
+End training model 7 @ 470.11834
+
+Accuracy for X_train with rbf kernel of svd data: 0.90247
+Accuracy for X_test with rbf kernel of svd data: 0.89579
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 8 @ 470.81056
+
+Negative log predictive density of training set with rbf kernel of svd data 0.277
+Negative log predictive density of validation set with rbf kernel of svd data 0.280
+
+
+End training model 8 @ 492.59649
+
+Accuracy for X_train with rbf kernel of svd data: 0.90113
+Accuracy for X_test with rbf kernel of svd data: 0.90782
+
+
+******************* Gaussian Process classification using svd data *****************
+
+Start training model 9 @ 493.29422
+
+Negative log predictive density of training set with rbf kernel of svd data 0.276
+Negative log predictive density of validation set with rbf kernel of svd data 0.293
+
+
+End training model 9 @ 515.07056
+
+Accuracy for X_train with rbf kernel of svd data: 0.90247
+Accuracy for X_test with rbf kernel of svd data: 0.89579
+
+
+******************** final results using svd data ************************
+
+Average train accuracy of svd data: 0.90193
+Average test accuracy of svd data: 0.90120
+Average negative log predictive density of training set with rbf kernel of svd data: 0.27720
+Average negative log predictive density of validation set with rbf kernel of svd data: 0.27867
+
