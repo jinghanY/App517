@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+import pickle 
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 from sklearn import metrics
@@ -58,7 +60,7 @@ def trainCla(features, label, out_graph, header_ele,label_names):
 	predicted_train = model.predict(X_train)
 	print("training accuracy")
 	print(metrics.accuracy_score(y_train,predicted_train))
-
+	print(metrics.roc_auc_score(y_train,predicted_train))
 
 
 
@@ -72,10 +74,38 @@ def trainCla(features, label, out_graph, header_ele,label_names):
 	# generate evaluation metrics
 	print("testing accuracy")
 	print(metrics.accuracy_score(y_test,predicted))
-	print(metrics.roc_auc_score(y_test, probs[:,1]))
+	# print(metrics.roc_auc_score(y_test, probs[:,1]))
+	fpr_log,tpr_log,_= metrics.roc_curve(y_test, probs[:,1])
+	roc_auc_log  = metrics.auc(fpr_log, tpr_log)
+	print('AUC_test\n')
+	print(roc_auc_log)
+	
+	# plot 
+	plt.figure()
+	lw = 2
+	plt.plot(fpr_log,tpr_log, color = 'darkorange', lw=lw, label='ROC curve for class 0 (logistic regression)' )
+	plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+	plt.xlim([0.0, 1.0])
+	plt.ylim([0.0, 1.05])
+	plt.xlabel('False Positive Rate')
+	plt.ylabel('True Positive Rate')
+	plt.title('Receiver operating characteristic example')
+	plt.legend(loc="lower right")
+	plt.savefig('logistic')
+
+
+	#datapath = '/Users/jinghanyang/Dropbox/courses_WUSTL/2018spring/MachineLearning517/Application_project_own/App517/milestone_1'
+	#fileName_probs = datapath+'/probs.pickle'
+	#with open(fileName_probs,'wb') as f:
+	#	pickle.dump(probs,f)
+	#fileName_test = datapath + '/test.pickle'
+	#with open(fileName_test, 'wb') as f:
+	#	pickle.dump(y_test,f)
     # print(metrics.confusion_matrix(y_test, predicted))
     #
     # print(metrics.classification_report(y_test, predicted))
+	#roc_auc =
+	print()
 
 	print("************Decision Tree**********\n")
 	print("start training for decision tree.\n")
@@ -93,6 +123,26 @@ def trainCla(features, label, out_graph, header_ele,label_names):
 	print(metrics.accuracy_score(y_test,predicted_tree_test))
 
 	probs_tree = clf_tree.predict_proba(X_test)
+	
+	
+	fpr_tree,tpr_tree,_= metrics.roc_curve(y_test, probs_tree[:,1])
+	roc_auc_tree  = metrics.auc(fpr_tree, tpr_tree)
+	print('AUC_test\n')
+	print(roc_auc_tree)
+
+	# plot 
+	plt.figure()
+	lw = 2
+	plt.plot(fpr_tree,tpr_tree, color = 'darkorange', lw=lw, label='ROC curve for class 0 (tree)')
+	plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+	plt.xlim([0.0, 1.0])
+	plt.ylim([0.0, 1.05])
+	plt.xlabel('False Positive Rate')
+	plt.ylabel('True Positive Rate')
+	plt.title('Receiver operating characteristic example')
+	plt.legend(loc="lower right")
+	plt.savefig('tree')
+
 
 	return probs[:,1], probs_tree[:,1], y_test
 
@@ -121,10 +171,6 @@ def getPred(yPredProb, threshold):
 			yPred[i] = int(0)
 	return yPred
 		
-	
-	
-
-
 
 if __name__ == "__main__":
 	cwd = os.getcwd()
